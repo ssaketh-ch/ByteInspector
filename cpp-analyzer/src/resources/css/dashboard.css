@@ -1,0 +1,36 @@
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-font-family: "Arial";
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px;
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 8px 15px;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.progress-bar {
+    -fx-accent: #007bff;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" stylesheets="@styles.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="CodeAnalysisDashboard">
+    
+    <!-- Top Bar with Title & Theme Toggle -->
+    <HBox spacing="10" alignment="CENTER" id="top-bar">
+        <Label text="Code Analysis Dashboard" id="title-label"/>
+        <ToggleButton fx:id="themeToggle" text="🌙 Dark Mode" onAction="#toggleTheme"/>
+    </HBox>
+    
+    <!-- Connection Section -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="serverIpField" promptText="Server IP Address"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+    </HBox>
+    
+    <!-- Upload Button -->
+    <Button fx:id="uploadButton" text="Upload Analysis File" onAction="#uploadFile"/>
+    
+    <!-- Analysis Results -->
+    <Label text="Analysis Results:" id="subtitle-label"/>
+    <TextArea fx:id="analysisArea" editable="false" wrapText="true"/>
+    
+    <!-- Progress Bar -->
+    <ProgressBar fx:id="progressBar" visible="false"/>
+</VBox>
+
+

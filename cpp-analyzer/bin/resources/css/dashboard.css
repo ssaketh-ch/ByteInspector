@@ -1,0 +1,39 @@
+/* dashboard-styles.css */
+.root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-background-color: #f4f4f4;
+}
+
+.title-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.input-field {
+    -fx-background-color: white;
+    -fx-border-color: #bbb;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px;
+}
+
+.upload-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.upload-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.analysis-area {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-font-family: 'Courier New', monospace;
+}
+
+.progress-bar {
+    -fx-accent: #4CAF50;
+}

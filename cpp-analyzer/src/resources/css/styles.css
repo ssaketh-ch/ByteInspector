@@ -1,0 +1,139 @@
+/* Dark Mode Root */
+.root {
+   -fx-background-color: #1e1e1e;
+   -fx-font-family: "Segoe UI", Arial, sans-serif;
+   -fx-font-size: 14px;
+   -fx-text-fill: #ffffff; /* Default text color for better visibility */
+}
+
+/* Top Bar */
+.top-bar {
+   -fx-background-color: #2c2c2c;
+   -fx-padding: 10px;
+}
+
+/* Title and Subtitle */
+#title-label {
+   -fx-font-size: 24px;
+   -fx-font-weight: bold;
+   -fx-text-fill: #e0e0e0; /* Adjusted title color */
+}
+
+#subtitle-label {
+   -fx-font-size: 16px;
+   -fx-text-fill: #d0d0d0; /* Adjusted subtitle color */
+   -fx-padding: 5px;
+}
+
+/* Input Fields */
+.text-field,
+.password-field,
+.combo-box,
+.date-picker {
+   -fx-background-color: #333333;
+   -fx-text-fill: #ffffff;
+   -fx-prompt-text-fill: #999999; /* Prompt text color for empty fields */
+}
+
+/* Combo Box Specific Styles */
+.combo-box .list-cell {
+   -fx-text-fill: #ffffff; /* Combo box list items text color */
+   -fx-background-color: #333333; /* Match the combo box background */
+}
+
+.combo-box .list-view {
+   -fx-background-color: #333333; /* Background of the list view */
+}
+
+.combo-box .list-view .list-cell:filled:hover {
+   -fx-background-color: rgba(255, 255, 255, 0.1); /* Hover color for list items */
+}
+
+.combo-box .list-view .list-cell:filled:selected {
+   -fx-background-color: rgba(255, 255, 255, 0.2); /* Selected color for list items */
+}
+
+/* Date Picker Styles */
+.date-picker .text-field {
+   -fx-text-fill: #ffffff; /* Date picker text color */
+}
+
+/* Buttons */
+.button {
+   -fx-background-color: #6200ee;
+   -fx-text-fill: #ffffff;
+}
+
+.button:hover {
+   -fx-background-color: #4300b3;
+}
+
+/* Text Area Styles */
+.text-area {
+   -fx-background-color: #333333;
+   -fx-text-fill: #ffffff;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+   -fx-accent: #0077ff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+   -fx-background-color: #333333;
+   -fx-text-fill: #ffffff;
+}
+.sidebar Label {
+   -fx-text-fill: #ffffff; /* Makes filter text white */
+   -fx-font-size: 14px; /* Ensures readability */
+}
+/*Sidebar labels*/
+.sidebar-label {
+   -fx-font-size: 18px;
+   -fx-font-weight: bold;
+   -fx-text-fill: #e0e0e0;
+   -fx-padding: 5px;
+}
+
+/*Sidebar ListView*/
+.sidebar .list-view {
+   -fx-background-color: transparent;
+}
+
+/*List view of sidebar*/
+.sidebar .list-view .list-cell {
+   -fx-background-color: transparent;
+   -fx-text-fill: #ffffff;
+   -fx-padding: 5px;
+}
+
+.sidebar .list-view .list-cell:hover {
+   -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*List View of selected sidebar items*/
+.sidebar .list-view .list-cell:selected {
+   -fx-background-color: rgba(255, 255, 255, 0.2);
+   -fx-font-weight: bold;
+}
+
+/*Combo Box of sidebar*/
+.sidebar .combo-box {
+   -fx-background-color: #333333;
+   -fx-text-fill: #ffffff;
+}
+
+.sidebar .combo-box .list-cell {
+   -fx-background-color: #333333;
+   -fx-text-fill: #ffffff;
+}
+
+/*Date Picker for sidebar*/
+.sidebar .date-picker {
+   -fx-background-color: #333333;
+}
+
+.sidebar .date-picker .text-field {
+   -fx-text-fill: #ffffff;
+}

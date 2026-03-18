@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gui.AnalysisDashboard"
+            prefHeight="700.0" prefWidth="1000.0"
+            stylesheets="@../css/styles.css">
+
+    <!-- Left: Sidebar for File Management and Filtering -->
+    <left>
+        <VBox fx:id="sidebar" prefWidth="250.0" spacing="10" styleClass="sidebar">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+
+            <Label text="File Management" styleClass="sidebar-label"/>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Filter by Type:"/>
+                <ComboBox fx:id="fileTypeFilter" prefWidth="120.0"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Filter by Date:"/>
+                <DatePicker fx:id="dateFilter" prefWidth="120.0"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Search"/>
+                <TextField fx:id="searchBar" promptText="Search..."/>
+            </HBox>
+
+            <Label text="Uploaded Files" styleClass="sidebar-label"/>
+            <ListView fx:id="fileListView" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+
+    <!-- Center: Main Dashboard Content -->
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+
+            <!-- Top Bar with Title -->
+            <HBox spacing="10" alignment="CENTER" styleClass="top-bar">
+                <padding><Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <Label text="Code Analysis Dashboard" HBox.hgrow="ALWAYS" id="title-label"/>
+            </HBox>
+
+            <!-- Connection Section -->
+            <HBox spacing="10" alignment="CENTER">
+                <padding><Insets left="20" right="20"/></padding>
+                <TextField fx:id="serverIpField" promptText="Server IP Address" HBox.hgrow="ALWAYS"/>
+                <PasswordField fx:id="passwordField" promptText="Password" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="connectButton" text="Connect to Server" onAction="#connectToServer"/>
+            </HBox>
+
+            <!-- Upload Button -->
+            <Button fx:id="uploadButton" text="Upload Analysis File" onAction="#uploadFile"/>
+
+            <!-- Analysis Results -->
+            <Label text="Analysis Results:" id="subtitle-label"/>
+            <TextArea fx:id="analysisArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS">
+                <padding><Insets left="20.0" right="20.0"/>
+                </padding>
+            </TextArea>
+
+            <!-- Progress Bar -->
+            <ProgressBar fx:id="progressBar" visible="false" maxWidth="Infinity">
+                <padding><Insets left="20.0" right="20.0"/>
+                </padding>
+            </ProgressBar>
+        </VBox>
+    </center>
+</BorderPane>
